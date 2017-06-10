@@ -13,10 +13,15 @@
 	{{- end }}
 
 	<section class="post-content">
+	{{ if and (isset .Params "featureimage") (not (eq .Params.featureimage "")) -}}
+		<header>{{ partial "post-meta" . }}</header>
+	{{ end }}
 		{{ .Content }}
-
+	{{ if isset .Params "unsplash" }}
+		{{ partial "unsplash" . }}
+	{{ end }}
+	</section>
 		{{ if (not (eq .Site.DisqusShortname "")) | and (not .Params.disableComments) }}
 			{{ template "_internal/disqus.html" . }}
 		{{ end }}
-	</section>
 {{- end }}
