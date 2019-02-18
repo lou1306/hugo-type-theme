@@ -9,6 +9,17 @@
 		</a>
 		<h1 class="site-title">
 			<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+			<small>
+		{{ range .Site.Languages }}
+			{{ if ne .Lang $.Page.Language.Lang }}
+				{{if eq .Lang "it"}}
+				<a href="/"> ({{ .Lang }})</a>
+				{{- else -}}
+				<a href="/{{.Lang}}"> ({{ .Lang }})</a>
+				{{- end -}}
+			{{- end -}}
+		{{- end -}}
+		</small>
 		</h1>
 	</div>
 	<nav class="site-nav">
