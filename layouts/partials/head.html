@@ -11,6 +11,10 @@
 
 	{{ "<!-- CSS -->" | safeHTML }}
 	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css">
+	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+	{{ if .Params.skeleton }}
+	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/skeleton.css">
+	{{ end }}
 
 	{{ "<!--Favicon-->" | safeHTML }}
 	<link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.ico" type="image/x-icon">
@@ -27,7 +31,13 @@
 	{{ "<!-- Google Fonts -->" | safeHTML }}
 	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
 
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
+	{{ if or (isset .Params "mathjax") (.IsHome) }}
+	<script type="text/javascript" async
+  		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+	</script>
+	{{ end }}
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
