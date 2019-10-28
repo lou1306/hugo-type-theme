@@ -8,12 +8,12 @@
 		{{- end }}
 		</a>
 		<h1 class="site-title">
-			<a href="{{ .Site.LanguagePrefix }}">{{ .Site.Title }}</a>
+			<a href='{{if eq .Lang "it"}}{{ .Site.BaseURL }}{{- else -}}/{{.Lang}}{{- end -}}'>{{ .Site.Title }}</a>
 			<small>
 		{{ range .Site.Languages }}
 			{{ if ne .Lang $.Page.Language.Lang }}
 				{{if eq .Lang "it"}}
-				<a href="/"> ({{ .Lang }})</a>
+				<a href="{{ $.Site.BaseURL }}"> ({{ .Lang }})</a>
 				{{- else -}}
 				<a href="/{{.Lang}}"> ({{ .Lang }})</a>
 				{{- end -}}
