@@ -20,11 +20,10 @@
 	{{ "<!--Favicon-->" | safeHTML }}
 	<link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.ico" type="image/x-icon">
 
+	<link rel="canonical" href="{{ .Permalink }}">
 	{{ "<!-- RSS -->" | safeHTML }}
-	{{ if .RSSLink -}}
-		<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-		<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-	{{- end }}
+	{{ with .OutputFormats.Get "RSS" }}<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />{{ end }}
+	{{ with .OutputFormats.Get "RSS" }}<link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />{{ end }}
 
 	{{ "<!-- Font Awesome -->" | safeHTML }}
 	<link href="//use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
