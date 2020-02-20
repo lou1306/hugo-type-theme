@@ -8,7 +8,7 @@
 
 {{ if .Site.Params.social.rss -}}
 <li class="icon">
-	<a href="{{ $.Site.BaseURL }}index.xml" title="{{ $.Site.Data.l10n.rssSubscribe }}">
+	<a href="{{ "index.xml" | relLangURL }}" title="{{ $.Site.Data.l10n.rssSubscribe }}">
 		<i class="fas fa-fw fa-rss"></i>
 	</a>
 </li>

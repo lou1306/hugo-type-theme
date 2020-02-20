@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
 <head>
 	<title>{{ .Title}}{{ if not .IsHome }} &middot; {{ .Site.Title }}{{ end }}</title>
 	<meta charset="utf-8">
@@ -12,10 +10,9 @@
 
 	{{ "<!-- CSS -->" | safeHTML }}
 	<link rel="stylesheet" href="{{ "css/main.css" | absURL }}">
-	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css">
-	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+	<link rel="stylesheet" href="{{ "css/style.css" | absURL}}">
 	{{ if .Params.skeleton }}
-	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/skeleton.css">
+	<link rel="stylesheet" href="{{ "css/skeleton.css" | absURL }}">
 	{{ end }}
 
 	{{ "<!--Favicon-->" | safeHTML }}
