@@ -9,18 +9,21 @@
 		<header>
 			<h1 class="title">{{ .Title }}</h1>
 			{{ partial "post-meta" . }}
-            {{ partial "translations" . }}
+			{{ partial "translations" . }}
 		</header>
 	{{- end }}
 
 	<section class="post-content">
 	{{ if and (isset .Params "featureimage") (not (eq .Params.featureimage "")) -}}
-		<header>{{ partial "post-meta" . }}</header>
+		<header>
+			{{ partial "post-meta" . }}
+			{{ partial "translations" . }}
+			{{ if isset .Params "unsplash" }}
+				{{ partial "unsplash" . }}
+			{{ end }}
+		</header>
 	{{ end }}
-		{{ .Content }}
-	{{ if isset .Params "unsplash" }}
-		{{ partial "unsplash" . }}
-	{{ end }}
+	{{ .Content }}
 	</section>
 		{{ if (not (eq .Site.DisqusShortname "")) | and (not .Params.disableComments) }}
 			{{ template "_internal/disqus.html" . }}
