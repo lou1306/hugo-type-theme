@@ -1,13 +1,10 @@
 <p class="meta">
     {{ .Date.Format "January 2, 2006" }} &middot; {{ i18n "readingTime" .ReadingTime }}
 
-    {{ if isset .Params "tags" -}}
-        {{ $tagsLen := len .Params.tags }}
-        {{ if gt $tagsLen 0 -}}
-            &middot; Tags:
-            {{ range $k, $v := (sort .Params.tags) -}}
-            <a href=" {{ "tags/" | relLangURL }}{{ . | urlize | lower }}">{{ . }}</a>{{ if lt $k (sub $tagsLen 1) }}, {{ end }}
-            {{- end }}
-        {{- end }}
-    {{- end }}
+    {{- if .Params.Tags -}} &middot; Tags: {{- end -}}
+    {{ range $i, $e := (sort .Params.tags) -}}
+    {{- if $i -}}, {{ end -}}
+    <a href='{{ "tags/" | relLangURL }}{{ . | urlize | lower }}'>{{ $e | humanize }}</a>
+    {{- end -}}
+
 </p>
