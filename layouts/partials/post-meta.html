@@ -2,7 +2,7 @@
     {{ .Date.Format "January 2, 2006" }} &middot; {{ i18n "readingTime" .ReadingTime }}
 
     {{- if .Params.Tags -}} &middot; Tags: {{- end -}}
-    {{ range $i, $e := (sort .Params.tags) -}}
+    {{ range $i, $e := .Params.tags -}}
     {{- if $i -}}, {{ end -}}
     <a href='{{ "tags/" | relLangURL }}{{ . | urlize | lower }}'>{{ $e | humanize }}</a>
     {{- end -}}
