@@ -24,8 +24,8 @@
 	</div>
 	<nav class="site-nav">
 		<ul>
-	      	{{ range .Site.Menus.nav -}}
-	        	<li><a href="{{ .URL }}"> {{ .Name }} </a>•</li>
+	      	{{ range .Site.Menus.main -}}
+	        	<li><a href="{{ .URL | relLangURL }}"> {{ .Name }} </a>•</li>
 	      	{{- end }}
 
 	      	{{ partial "icons.html" . }}

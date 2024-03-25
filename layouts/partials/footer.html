@@ -1,4 +1,8 @@
 <footer class="site-footer">
-	<p class="text">&copy; {{ now.Format "2006" }} - {{ .Site.Params.author }} <br/> {{ .Site.Params.copyright | markdownify }}</p>
+	<p class="text">&copy; {{ now.Format "2006" }} - {{ .Site.Params.author }} <br/> {{ .Site.Params.copyright | markdownify }}<br/>
+	{{ range $i, $elem := .Site.Menus.footer }}
+		{{- if $i -}}•{{- end -}}
+    	<a href="{{ $elem.URL | relLangURL }}"> {{ $elem.Name }} </a>
+  	{{- end }}</p>
 </footer>
 
