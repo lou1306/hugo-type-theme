@@ -9,7 +9,7 @@
 
 {{ with .Site.Params.social.email -}}
 <li class="icon">
-	<a href="mailto:{{ $.Site.Params.social.email }}" title="{{ T "email" }}">
+	<a href="mailto:{{ . }}" title="{{ T "email" }}">
 		<i class="fas fa-fw fa-envelope"></i>
 	</a>
 </li>
@@ -17,7 +17,7 @@
 
 {{ with .Site.Params.social.behance -}}
 <li class="icon">
-	<a href="https://www.behance.net/{{ $.Site.Params.social.behance }}" rel="me" title="{{ T "behance" }}">
+	<a href="https://www.behance.net/{{ . }}" rel="me" title="{{ T "behance" }}">
 		<i class="fab fa-fw fa-behance"></i>
 	</a>
 </li>
@@ -25,7 +25,7 @@
 
 {{ with .Site.Params.social.bitbucket -}}
 <li class="icon">
-	<a href="https://bitbucket.org/{{ $.Site.Params.social.bitbucket }}" rel="me" title="{{ T "bitbucket" }}">
+	<a href="https://bitbucket.org/{{ . }}" rel="me" title="{{ T "bitbucket" }}">
 		<i class="fab fa-fw fa-bitbucket"></i>
 	</a>
 </li>
@@ -33,7 +33,7 @@
 
 {{ with .Site.Params.social.dribbble -}}
 <li class="icon">
-	<a href="https://dribbble.com/{{ $.Site.Params.social.dribbble }}" rel="me" title="{{ T "dribbble" }}">
+	<a href="https://dribbble.com/{{ . }}" rel="me" title="{{ T "dribbble" }}">
 		<i class="fab fa-fw fa-dribbble"></i>
 	</a>
 </li>
@@ -41,7 +41,7 @@
 
 {{ with .Site.Params.social.facebook -}}
 <li class="icon">
-	<a href="https://www.facebook.com/{{ $.Site.Params.social.facebook }}" title="{{ T "facebook" }}">
+	<a href="https://www.facebook.com/{{ . }}" title="{{ T "facebook" }}">
 		<i class="fab fa-fw fa-facebook"></i>
 	</a>
 </li>
@@ -49,7 +49,7 @@
 
 {{ with .Site.Params.social.flickr -}}
 <li class="icon">
-	<a href="https://www.flickr.com/photos/{{ $.Site.Params.social.flickr }}" rel="me" title="{{ T "flickr" }}">
+	<a href="https://www.flickr.com/photos/{{ . }}" rel="me" title="{{ T "flickr" }}">
 		<i class="fab fa-fw fa-flickr"></i>
 	</a>
 </li>
@@ -57,7 +57,7 @@
 
 {{ with .Site.Params.social.github -}}
 <li class="icon">
-	<a href="https://github.com/{{ $.Site.Params.social.github }}" rel="me" title="{{ T "github" }}">
+	<a href="https://github.com/{{ . }}" rel="me" title="{{ T "github" }}">
 		<i class="fab fa-fw fa-github"></i>
 	</a>
 </li>
@@ -65,7 +65,7 @@
 
 {{ with .Site.Params.social.googleplus -}}
 <li class="icon">
-	<a href="https://plus.google.com/{{ $.Site.Params.social.googleplus }}" rel="me" title="{{ T "googleplus" }}">
+	<a href="https://plus.google.com/{{ . }}" rel="me" title="{{ T "googleplus" }}">
 		<i class="fab fa-fw fa-google-plus"></i>
 	</a>
 </li>
@@ -73,7 +73,7 @@
 
 {{ with .Site.Params.social.instagram -}}
 <li class="icon">
-	<a href="https://instagram.com/{{ $.Site.Params.social.instagram }}" rel="me" title="{{ T "instagram" }}">
+	<a href="https://instagram.com/{{ . }}" rel="me" title="{{ T "instagram" }}">
 		<i class="fab fa-fw fa-instagram"></i>
 	</a>
 </li>
@@ -81,7 +81,7 @@
 
 {{ with .Site.Params.social.pinterest -}}
 <li class="icon">
-	<a href="https://www.pinterest.com/{{ $.Site.Params.social.pinterest }}" rel="me" title="{{ T "pinterest" }}">
+	<a href="https://www.pinterest.com/{{ . }}" rel="me" title="{{ T "pinterest" }}">
 		<i class="fab fa-fw fa-pinterest"></i>
 	</a>
 </li>
@@ -89,7 +89,7 @@
 
 {{ with .Site.Params.social.reddit -}}
 <li class="icon">
-	<a href="https://www.reddit.com/user/{{ $.Site.Params.social.reddit }}" rel="me" title="{{ T "reddit" }}">
+	<a href="https://www.reddit.com/user/{{ . }}" rel="me" title="{{ T "reddit" }}">
 		<i class="fab fa-fw fa-reddit"></i>
 	</a>
 </li>
@@ -97,7 +97,7 @@
 
 {{ with .Site.Params.social.soundcloud -}}
 <li class="icon">
-	<a href="https://soundcloud.com/{{ $.Site.Params.social.soundcloud }}" rel="me" title="{{ T "soundcloud" }}">
+	<a href="https://soundcloud.com/{{ . }}" rel="me" title="{{ T "soundcloud" }}">
 		<i class="fab fa-fw fa-soundcloud"></i>
 	</a>
 </li>
@@ -105,7 +105,7 @@
 
 {{ with .Site.Params.social.stackexchange -}}
 <li class="icon">
-	<a href="{{ $.Site.Params.social.stackexchange }}" rel="me" title="{{ T "stackexchange" }}">
+	<a href="{{ . }}" rel="me" title="{{ T "stackexchange" }}">
 		<i class="fab fa-fw fa-stack-exchange"></i>
 	</a>
 </li>
@@ -113,7 +113,7 @@
 
 {{ with .Site.Params.social.steam -}}
 <li class="icon">
-	<a href="https://steamcommunity.com/id/{{ $.Site.Params.social.steam }}" rel="me" title="{{ T "steam" }}">
+	<a href="https://steamcommunity.com/id/{{ . }}" rel="me" title="{{ T "steam" }}">
 		<i class="fab fa-fw fa-steam"></i>
 	</a>
 </li>
@@ -121,7 +121,7 @@
 
 {{ with .Site.Params.social.tumblr -}}
 <li class="icon">
-	<a href="http://{{ $.Site.Params.social.tumblr }}.tumblr.com/" rel="me" title="{{ T "tumblr" }}">
+	<a href="http://{{ . }}.tumblr.com/" rel="me" title="{{ T "tumblr" }}">
 		<i class="fab fa-fw fa-tumblr"></i>
 	</a>
 </li>
@@ -129,7 +129,7 @@
 
 {{ with .Site.Params.social.wordpress -}}
 <li class="icon">
-	<a href="https://{{ $.Site.Params.social.wordpress }}.wordpress.com/" rel="me" title="{{ T "wordpress" }}">
+	<a href="https://{{ . }}.wordpress.com/" rel="me" title="{{ T "wordpress" }}">
 		<i class="fab fa-fw fa-wordpress"></i>
 	</a>
 </li>
@@ -137,7 +137,7 @@
 
 {{ with .Site.Params.social.youtube -}}
 <li class="icon">
-	<a href="https://www.youtube.com/user/{{ $.Site.Params.social.youtube }}" rel="me" title="{{ T "youtube" }}">
+	<a href="https://www.youtube.com/user/{{ . }}" rel="me" title="{{ T "youtube" }}">
 		<i class="fab fa-fw fa-youtube"></i>
 	</a>
 </li>
@@ -145,7 +145,7 @@
 
 {{ with .Site.Params.social.trello -}}
 <li class="icon">
-	<a href="https://trello.com/{{ $.Site.Params.social.trello }}" rel="me" title="{{ T "trello" }}">
+	<a href="https://trello.com/{{ . }}" rel="me" title="{{ T "trello" }}">
 		<i class="fab fa-fw fa-trello"></i>
 	</a>
 </li>
@@ -153,7 +153,7 @@
 
 {{ with .Site.Params.social.gitlab -}}
 <li class="icon">
-	<a href="https://gitlab.com/{{ $.Site.Params.social.gitlab }}" rel="me" title="{{ T "gitlab" }}">
+	<a href="https://gitlab.com/{{ . }}" rel="me" title="{{ T "gitlab" }}">
 		<i class="fab fa-fw fa-gitlab"></i>
 	</a>
 </li>
@@ -161,7 +161,7 @@
 
 {{ with .Site.Params.social.meetup -}}
 <li class="icon">
-	<a href="https://meetup.com/{{ $.Site.Params.social.meetup }}" rel="me" title="{{ T "meetup" }}">
+	<a href="https://meetup.com/{{ . }}" rel="me" title="{{ T "meetup" }}">
 		<i class="fab fa-fw fa-meetup"></i>
 	</a>
 </li>
@@ -169,7 +169,7 @@
 
 {{ with .Site.Params.social.speakerdeck -}}
 <li class="icon">
-	<a href="https://speakerdeck.com/{{ $.Site.Params.social.speakerdeck }}" rel="me" title="{{ T "speakerdeck" }}">
+	<a href="https://speakerdeck.com/{{ . }}" rel="me" title="{{ T "speakerdeck" }}">
 		<i class="fab fa-fw fa-speaker-deck"></i>
 	</a>
 </li>
@@ -177,7 +177,7 @@
 
 {{ with .Site.Params.social.orcid -}}
 <li class="icon">
-	<a href="https://orcid.org/{{ $.Site.Params.social.orcid }}" rel="me" title="ORCID iD">
+	<a href="https://orcid.org/{{ . }}" rel="me" title="ORCID iD">
 		<i class="ai fa-fw ai-orcid"></i>
 	</a>
 </li>
@@ -185,7 +185,7 @@
 
 {{ with .Site.Params.social.dblp -}}
 <li class="icon">
-	<a href="https://dblp.org/pid/{{ $.Site.Params.social.dblp }}" rel="me" title="DBLP">
+	<a href="https://dblp.org/pid/{{ . }}" rel="me" title="DBLP">
 		<i class="ai fa-fw ai-dblp"></i>
 	</a>
 </li>
@@ -193,7 +193,7 @@
 
 {{ with .Site.Params.social.researchgate -}}
 <li class="icon">
-	<a href="https://www.researchgate.net/profile/{{ $.Site.Params.social.researchgate }}" rel="me" title="{{ T "researchgate" }}">
+	<a href="https://www.researchgate.net/profile/{{ . }}" rel="me" title="{{ T "researchgate" }}">
             <i class="fab fa-fw fa-researchgate"></i>
 	</a>
 </li>
@@ -201,7 +201,7 @@
 
 {{ with .Site.Params.social.linkedin -}}
 <li class="icon">
-	<a href="https://www.linkedin.com/in/{{ $.Site.Params.social.linkedin }}" rel="me" title="{{ T "linkedin" }}">
+	<a href="https://www.linkedin.com/in/{{ . }}" rel="me" title="{{ T "linkedin" }}">
 		<i class="fab fa-fw fa-linkedin"></i>
 	</a>
 </li>
@@ -210,9 +210,17 @@
 <li>•</li>
 <!-- Personal links here -->
 
+{{ with .Site.Params.social.goodreads -}}
+<li class="icon">
+	<a href="https://goodreads.com/{{ . }}" rel="me" title="{{ T "twitter" }}">
+		<i class="fab fa-fw fa-goodreads"></i>
+	</a>
+</li>
+{{- end }}
+
 {{ with .Site.Params.social.keybase -}}
 <li class="icon">
-	<a href="https://keybase.io/{{ $.Site.Params.social.keybase }}" title="Keybase">
+	<a href="https://keybase.io/{{ . }}" title="Keybase">
 		<i class="fab fa-keybase"></i>
 	</a>
 </li>
@@ -220,7 +228,7 @@
 
 {{ with .Site.Params.social.twitter -}}
 <li class="icon">
-	<a href="https://twitter.com/{{ $.Site.Params.social.twitter }}" rel="me" title="{{ T "twitter" }}">
+	<a href="https://twitter.com/{{ . }}" rel="me" title="{{ T "twitter" }}">
 		<i class="fab fa-fw fa-twitter"></i>
 	</a>
 </li>
