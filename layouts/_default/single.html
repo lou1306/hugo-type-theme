@@ -25,7 +25,4 @@
 	{{ end }}
 	{{ .Content }}
 	</section>
-		{{ if (not (eq .Site.DisqusShortname "")) | and (not .Params.disableComments) }}
-			{{ template "_internal/disqus.html" . }}
-		{{ end }}
 {{- end }}
